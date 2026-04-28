@@ -101,7 +101,7 @@ app.post("/desaparecidos", auth, async (req, res) => {
     }
 })
 
-app.put("/desaparecidos/:id", auth, validarPost, async (req, res) => {
+app.put("/desaparecidos/:id", auth, async (req, res) => {
     try {
         const { id } = req.params
         const {tipo, local, data_hora } = req.body
