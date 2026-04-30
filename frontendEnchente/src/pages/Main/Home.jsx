@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import '../Main/home.css'
+import api from "../../services/api"
 
 export default function Home() {
     return (
