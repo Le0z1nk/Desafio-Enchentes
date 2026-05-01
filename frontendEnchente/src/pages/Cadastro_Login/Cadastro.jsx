@@ -6,10 +6,10 @@ import api from "../../services/api"
 export default function Cadastro() {
     return (
         <section id="mainCadastro">
-            <section class="sectionCadastro">
+            <section className="sectionCadastro">
                 <h1>Criar Conta</h1>
                 <p>Cadastre-se para registrar pessoas e acompanhar buscas</p>
-                <form class="formCadastro">
+                <form className="formCadastro">
                     <div>
                         <label for="name">Nome</label>
                         <input placeholder="Nome completo" required/>

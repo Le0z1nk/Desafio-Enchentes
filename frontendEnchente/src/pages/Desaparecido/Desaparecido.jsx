@@ -4,10 +4,10 @@ import '../Desaparecido/desaparecido.css'
 export default function Desaparecido() {
     return (
         <section id="mainDesaparecido">
-            <section class="sectionDesaparecido">
+            <section className="sectionDesaparecido">
                 <h1>Registrar desaparecido</h1>
                 <p>Preencha os dados para ajudar a localizar a pessoa</p>
-                <form class="formDesaparecido">
+                <form className="formDesaparecido">
                     <div>
                         <label for="foto">Foto</label>
                         <input type="file"/>
@@ -48,7 +48,7 @@ export default function Desaparecido() {
                     </div>
                     <div>
                         <label for="desc">Descrição</label>
-                        <textarea class="descricao" placeholder="Descreva características físicas, roupas, circunstancias do desaparecimento ou onde a pessoa foi encontrada, condições de saúde..." required/>
+                        <textarea className="descricao" placeholder="Descreva características físicas, roupas, circunstancias do desaparecimento ou onde a pessoa foi encontrada, condições de saúde..." required/>
                     </div>
                     <button>Enviar</button>
                 </form>

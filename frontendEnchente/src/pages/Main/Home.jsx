@@ -6,16 +6,16 @@ import api from "../../services/api"
 export default function Home() {
     return (
         <main>
-            <section class="sectioninicio">
-                <h1 class="titulo">Reunindo Famílias em Momentos de Emergência</h1>
-                <p class="subtitulo">Plataforma solidária para ajudar pessoas a encontrar seus entes queridos durante enchentes e situações de emergência.
+            <section className="sectioninicio">
+                <h1 className="titulo">Reunindo Famílias em Momentos de Emergência</h1>
+                <p className="subtitulo">Plataforma solidária para ajudar pessoas a encontrar seus entes queridos durante enchentes e situações de emergência.
                     Registre, busque e reencontre.</p>
-                    <NavLink to="/registrar-desaparecido"><button class="botaoInicio">Registrar Desaparecido</button></NavLink>
+                    <NavLink to="/registrar-desaparecido"><button className="botaoInicio">Registrar Desaparecido</button></NavLink>
             </section>
-            <section class="sectionBusca">
-                <h2 class="tituloBusca">Buscar Pessoas</h2>
-                <p class="subtituloBusca">Enconre pessoas desaparecidas ou encontradas</p>
-                <div class="divPesquisa">
+            <section className="sectionBusca">
+                <h2 className="tituloBusca">Buscar Pessoas</h2>
+                <p className="subtituloBusca">Enconre pessoas desaparecidas ou encontradas</p>
+                <div className="divPesquisa">
                     <input placeholder="Buscar por nome..." />
                     <button>Buscar</button>
                     <button><svg width="15px" height="15px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ export default function Home() {
                         <path d="M10 15H6V13H10V15Z" fill="#000000" />
                     </svg> Filtrar</button>
                 </div>
-                <div class="divBotoesPessoas">
+                <div className="divBotoesPessoas">
                     <button>Todos</button>
                     <button>Desaparecidos</button>
                     <button>Encontrados</button>

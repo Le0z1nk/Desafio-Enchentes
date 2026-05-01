@@ -5,10 +5,10 @@ import '../Cadastro_Login/login.css'
 export default function Login() {
     return (
          <section id="mainLogin">
-            <section class="sectionLogin">
+            <section className="sectionLogin">
                 <h1>Entrar</h1>
                 <p>Acesse sua conta</p>
-                <form class="formLogin">
+                <form className="formLogin">
                     <div>
                         <label for="email">E-mail</label>
                         <input placeholder="Digite o email" required/>
