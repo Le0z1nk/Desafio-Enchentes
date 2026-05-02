@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {NavLink} from 'react-router-dom'
 import '../Main/home.css'
 import api from "../../services/api"
 
 export default function Home() {
+    const [desaparecido, setDesaparecido] = useState([])
+
+    useEffect(() => {
+        async function carregarDesaparecidos() {
+            try {
+                const res = await api.get("/desaparecidos")
+                setDesaparecido(res.data)
+            } catch (error) {
+                console.log("Erro ao carregar desaparecidos" + error)
+            }
+        }
+        carregarDesaparecidos()
+    }, [])
+
     return (
         <main>
             <section className="sectioninicio">
@@ -29,6 +43,17 @@ export default function Home() {
                     <button>Todos</button>
                     <button>Desaparecidos</button>
                     <button>Encontrados</button>
+                </div>
+                <div>
+                    {desaparecido.length === 0 ? (
+                        <p>Sem desaparecidos....</p>
+                    ) : (
+                        desaparecido.map((desaparecido) => (
+                            <section key={desaparecido.id} desaparecido={desaparecido}>
+
+                            </section>
+                        ))
+                    )} 
                 </div>
             </section>
         </main>

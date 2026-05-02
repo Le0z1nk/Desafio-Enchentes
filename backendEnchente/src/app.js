@@ -9,9 +9,6 @@ const cors = require("cors")
 const app = express()
 app.use(express.json())
 app.use(cors())
-function formatarData(data) {
-    return new Date(data).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
-}
 
 app.get("/usuarios", async (req, res) => {
     try {
@@ -28,7 +25,7 @@ app.get("/usuarios", async (req, res) => {
     }
 })
 
-app.post("/usuario", validarUsuarios, async (req, res) => {
+app.post("/usuarios", validarUsuarios, async (req, res) => {
     try {
         const { nome, email, senha } = req.body
         const senhaHash = await bcrypt.hash(senha, 10)
