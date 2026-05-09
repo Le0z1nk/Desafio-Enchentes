@@ -33,13 +33,14 @@ app.post("/usuarios", validarUsuarios, async (req, res) => {
             `
             INSERT INTO usuario (nome, email, senha) VALUES ($1, $2, $3) RETURNING *
             `,
-            [nome, email, senha]
+            [nome, email, senhaHash]
         )
         res.status(201).json({
             mensagem: "usuario criado com sucesso!",
             usuario: resultado.rows[0]
         })
     } catch (erro) {
+        console.error(erro)
         res.status(500).json({
             erro: "Erro ao criar usuario"
         })
